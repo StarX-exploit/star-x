@@ -69,7 +69,7 @@ app.get('/get-key', getKeyLimiter, async (req, res) => {
         });
     } else {
         res.setHeader('Content-Type', 'text/html');
-        res.send(generateHtmlResponse(STATIC_KEY));
+        res.send(generateHtmlResponse(process.env.STATIC_KEY));
     }
 });
 
